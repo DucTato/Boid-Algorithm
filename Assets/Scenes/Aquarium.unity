@@ -357,9 +357,9 @@ GameObject:
   m_Component:
   - component: {fileID: 495123681}
   - component: {fileID: 495123680}
-  - component: {fileID: 495123679}
   - component: {fileID: 495123683}
   - component: {fileID: 495123682}
+  - component: {fileID: 495123684}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -367,14 +367,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &495123679
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495123678}
-  m_Enabled: 1
 --- !u!20 &495123680
 Camera:
   m_ObjectHideFlags: 0
@@ -445,6 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f05956701dfb442822c4190a698749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  predatorCam: 0
   speed: 20
 --- !u!114 &495123683
 MonoBehaviour:
@@ -459,6 +452,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookSpeed: 3
+--- !u!135 &495123684
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495123678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0.72}
 --- !u!1 &505448751
 GameObject:
   m_ObjectHideFlags: 0
