@@ -4,6 +4,7 @@ using System.Collections;
 public class Spectator : MonoBehaviour
 {
     public static Spectator instance;
+    public bool predatorCam = false;
 
     //initial speed
     public int speed = 20;
@@ -58,6 +59,17 @@ public class Spectator : MonoBehaviour
         {
 
             transform.position = transform.position + Camera.main.transform.forward * speed * Time.deltaTime;
+        }
+        //press SPACE to toggle Predator Camera ON/OFF
+        if (Input.GetKeyDown(KeyCode.Space) && (predatorCam == false))
+        {
+            predatorCam = true;
+            Debug.Log("Predator Cam enabled");
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) && (predatorCam == true))
+        {
+            predatorCam = false;
+            Debug.Log("Predator Cam disabled");
         }
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BoidController : MonoBehaviour
 {
+
     public int SwarmIndex { get; set; }
     public float NoClumpingRadius { get; set; }
     public float LocalAreaRadius { get; set; }
@@ -87,6 +88,12 @@ public class BoidController : MonoBehaviour
         RaycastHit hitInfo;
         if (Physics.Raycast(transform.position, transform.forward, out hitInfo, LocalAreaRadius, LayerMask.GetMask("Default")))
             steering = ((hitInfo.point + hitInfo.normal) - transform.position).normalized;
+
+        //predator presence. Boids running away from the CAMERA
+        if (Spectator.instance.predatorCam && Vector3.Distance(transform.position,Spectator.instance.transform.position) <= 25)
+        {
+            steering = transform.position - Spectator.instance.transform.position;
+        }
 
         //apply steering
         if (steering != Vector3.zero)
