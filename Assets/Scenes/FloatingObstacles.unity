@@ -640,6 +640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f05956701dfb442822c4190a698749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  predatorCam: 0
   speed: 20
 --- !u!114 &963194230
 MonoBehaviour:
@@ -666,7 +667,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0.72}
 --- !u!1 &1005860211
 GameObject:
   m_ObjectHideFlags: 0
